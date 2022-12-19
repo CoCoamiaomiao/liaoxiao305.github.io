@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" >
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>20001030305廖霄 推荐</title>
+    <style>
+        /*导航*/
+        .nav{
+            width: 100%;
+            height: 50px;
+            background-color: #017E5C;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+        }
+        .nav ul{
+            list-style: none;
+        }
+
+
+
+        /*推荐*/
+        .reference{
+            width: 100%;
+            height: 25px;
+            background-color: #eee;
+            text-align: center;
+            line-height: 25px;
+            font-size: 14px;
+            color: #017E5C;
+        }
+        .reference ul{
+            list-style: none;
+        }
+
+
+
+        /*主体*/
+        .main-box{
+            padding: 0;
+            margin: 0;
+        }
+        .main-box img{
+            width: 100%;
+        }
+        .main-box ul{
+            list-style: none;
+        }
+      
+
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul></ul>
+    </div>
+
+
+    <div class="reference">
+        <ul></ul>
+    </div>
+
+
+
+    <div class="main-box">
+        <ul></ul>
+    </div>
+    
+
+
+
+<script>
+    var json = [
+        {
+            title:"猜你喜欢"
+        }
+    ];
+    var ul = document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0];
+    function addLI(li){
+            var n = `
+                <div class="text">
+                    <h2>${li.title}</h2>
+                </div>
+            `;
+
+            var nli = document.createElement("li");
+            nli.innerHTML = n;
+            ul.appendChild(nli);
+        }
+        for(var i=0; i<json.length; i++){
+            addLI(json[i])
+        }
+
+
+        var json2 = [
+            {
+                img:"./img/container-1.png",
+                title:"请问你要来点兔子吗？提比毛绒玩偶",
+                content:"最近常看"
+            },
+            {
+                img:"./img/container-2.png",
+                title:"爱疯14-无敌版，牛逼666",
+                content:"最近常看"
+            },
+            {
+                img:"./img/container-4.png",
+                title:"amovo魔吻黑巧克力礼盒",
+                content:"最近常看"
+            }
+        ];
+        
+        var ul = document.getElementsByClassName("main-box")[0].getElementsByTagName("ul")[0];
+
+        function addLI1(li1){
+            var n1 = `
+                <img src="${li1.img}">
+                <div class="text">
+                    <h2>${li1.title}</h2>
+                    <p>${li1.content}</p>
+                </div>
+            `;
+
+            var nli1 = document.createElement("li1");
+            nli1.innerHTML = n1;
+            ul.appendChild(nli1);
+        }
+
+        for(var i=0; i<json2.length; i++){
+            addLI1(json2[i])
+        }
+        
+
+        var json3 = [
+        {
+            title:"------>>为你推荐:<<------"
+        }
+            ];
+        var ul = document.getElementsByClassName("reference")[0].getElementsByTagName("ul")[0];
+        function addLI3(li3){
+            var n3 = `
+                <div class="text">
+                    <h2>${li3.title}</h2>
+                </div>
+            `;
+
+            var nli3 = document.createElement("li3");
+            nli3.innerHTML = n3;
+            ul.appendChild(nli3);
+        }
+        for(var i=0; i<json3.length; i++){
+            addLI(json3[i])
+        }
+
+
+    </script>
+</body>
+</html>
